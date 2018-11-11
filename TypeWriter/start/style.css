@@ -1,0 +1,29 @@
+html {
+	height: 100%;
+}
+
+body {
+	background-image: url('bg.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+
+.wrapper {
+	align-items: center;
+	background-color: rgba(0,0,0,.8);
+	color: white;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+.intro {
+	display: flex;
+	font-size: 100px;
+}
+.text {
+	border-right: 1px solid white;
+	margin-left: 10px;
+}
