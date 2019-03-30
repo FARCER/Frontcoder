@@ -1,0 +1,20 @@
+extends layout/main
+block variables
+	- var pageTitle = '123'
+	- var youAreUsingPug = true
+
+block content
+	h1.title Pug - node template engine
+	#container.col
+		if youAreUsingPug
+			p You are amazing
+		else
+			p Get on it!
+		p.
+			Pug is a terse and simple templating language with a
+			strong focus on performance and powerful features.
+		p Звоните по телефону #[a(href="" class="123") 123-123]
+		p Звоните по телефону
+			a(href="") 123
+
+block scripts
