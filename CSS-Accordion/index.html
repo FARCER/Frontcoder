@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.wrapper {
+			margin: 0 auto;
+			width: 800px;
+		}
+		.accordion__text {
+			cursor: pointer;
+			font-weight: bold;
+		}
+		.accordion__input {
+			display: none;
+		}
+		.accordion__input:checked+.accordion__body {
+			max-height: 100vh;
+			padding: 20px;
+		}
+		.accordion__body {
+			background-color: #f2f2f2;
+			border-radius: 15px;
+			max-height: 0;
+			overflow: hidden;
+			padding: 0 20px;
+			transition: all linear .5s;
+		}
+
+	</style>
+</head>
+<body>
+<div class="wrapper">
+<label class="accordion__item">
+	<span class="accordion__text">Показать текст</span>
+	<input type="radio" class="accordion__input" name="test">
+	<div class="accordion__body">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dignissimos illum, in magnam qui repellendus totam? Asperiores cumque earum iste mollitia voluptatum? Fuga harum minima nam placeat praesentium quaerat ut!</p>
+	</div>
+</label>
+	<label class="accordion__item">
+		<span class="accordion__text">Показать текст</span>
+		<input type="radio" class="accordion__input" name="test">
+		<div class="accordion__body">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dignissimos illum, in magnam qui repellendus totam? Asperiores cumque earum iste mollitia voluptatum? Fuga harum minima nam placeat praesentium quaerat ut!</p>
+		</div>
+	</label>
+</div>
+</body>
+</html>
