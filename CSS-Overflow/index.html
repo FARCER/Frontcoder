@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.wrapper {
+			background-color: #f2f2f2;
+			margin: 0 auto;
+			overflow: hidden;
+			width: 300px;
+		}
+		.list {
+			border: 1px solid #dddddd;
+			display: flex;
+			margin: 0;
+			overflow: auto;
+			padding: 15px;
+		}
+		.list:after {
+			content: '';
+			display: block;
+			flex-shrink: 0;
+			width: 15px;
+		}
+		.list li {
+			list-style-type: none;
+			margin-right: 15px;
+			white-space: nowrap;
+		}
+		.list li:last-child {
+			margin-right: 0;}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<ul class="list">
+		<li>Item item 1</li>
+		<li>Item item 2</li>
+		<li>Item item 3</li>
+		<li>Item item 4</li>
+	</ul>
+</div>
+</body>
+</html>
