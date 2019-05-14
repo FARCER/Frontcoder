@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.wrapper {
+			margin: 0 auto;
+			width: 800px;
+		}
+		.header {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+		}
+		.block-1 {
+			background-color: #f2f2f2;
+			height: 50px;
+			width: 150px;
+		}
+		.block-2 {
+			background-color: #777;
+			height: 40px;
+			width: 200px;
+		}
+		.block-3 {
+			background-color: indianred;
+			height: 30px;
+			width: 150px;
+		}
+		.block-4 {
+			align-items: center;
+			display: flex;
+			height: 50px;
+			width: 200px;
+		}
+		.block-4 > *:not(:last-child) {
+			margin-right: 10px;
+		}
+		.sub-block {
+			background-color: darkgoldenrod;
+			flex: 1;
+			height: 40px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<div class="block-1"></div>
+		<div class="block-2"></div>
+		<div class="block-3"></div>
+		<div class="block-4">
+			<div class="sub-block sub-block-2"></div>
+			<div class="sub-block sub-block-1"></div>
+			<div class="sub-block sub-block-1"></div>
+		</div>
+	</header>
+</div>
+</body>
+</html>
