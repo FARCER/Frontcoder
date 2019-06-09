@@ -1,0 +1,48 @@
+.select {
+	margin: 0 auto;
+	position: relative;
+	width: 250px;
+}
+.select.is-active .select__body {
+	display: block;}
+
+.select__header {
+	border: 1px solid #ccc;
+	cursor: pointer;
+	display: flex;
+}
+.select__current {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 8px;
+}
+.select__icon {
+	align-items: center;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	height: 40px;
+	margin-left: auto;
+	text-align: center;
+	width: 40px;
+}
+
+.select__body {
+	border: 1px solid #cccccc;
+	border-top: 0;
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 100%;
+}
+.select__item {
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 8px;
+}
+
+.select__item:hover {
+	background-color: #f2f2f2;
+}
