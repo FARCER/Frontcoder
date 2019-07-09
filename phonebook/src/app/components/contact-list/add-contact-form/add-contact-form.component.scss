@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  margin-bottom: 50px;
+  .btn {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    line-height: 22px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    text-align: center;
+  }
+  .form {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    &__body {
+      margin-bottom: 30px;
+    }
+    &__group {
+      &:not(:last-child) { margin-bottom: 20px; }
+    }
+    &__label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+  .input {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    height: 40px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+}

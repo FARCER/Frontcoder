@@ -1,5 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
 
-* {
-  box-sizing: border-box;
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing:  border-box;
+  outline: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+textarea,
+video { vertical-align: middle; }
+
+svg { vertical-align: top; }
+
+ul,li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+p {
+  line-height: 24px;
+  margin: 0;
 }

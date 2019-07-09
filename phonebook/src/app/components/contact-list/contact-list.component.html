@@ -1,2 +1,3 @@
 <input type="text" class="input">
+<app-add-contact-form (addContact)="addContact($event)"></app-add-contact-form>
 <app-contact *ngFor="let contact of contacts" [contact]="contact"></app-contact>
