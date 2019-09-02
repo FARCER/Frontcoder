@@ -1,0 +1,33 @@
+summary::-webkit-details-marker { display: none; }
+
+summary {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	outline: none;
+	padding: 5px;
+}
+
+summary:before {
+	content: '';
+	background-image: url("https://image.flaticon.com/icons/svg/109/109617.svg");
+	background-position: center;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	transition: all linear .3s;
+}
+
+
+details[open] summary:before {
+	transform: rotate(90deg);
+}
+
+details p {
+	background-color: #f2f2f2;
+	padding: 10px 15px;
+}
+
+
