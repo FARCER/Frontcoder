@@ -1,0 +1,125 @@
+.wrapper {
+	background-color: #f2f2f2;
+	margin: 0 auto;
+	padding: 10px;
+	width: 1000px;
+}
+
+
+.container {
+	display: flex;
+	margin-bottom: 100px;
+}
+
+.item {
+	background-color: deepskyblue;
+	border-radius: 5px;
+	border: 1px solid cornflowerblue;
+	height: 100px;
+}
+
+.stretch .item {
+	width: 100px;
+}
+
+.stretch .item.item-center {
+	flex-grow: 1;
+}
+
+.stretch .item + .item {
+	margin-left: 2%;
+}
+
+.container.grid {
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.grid .item {
+	margin-bottom: 2%;
+	width: 48%;
+}
+
+.grid .item:nth-child(3n) {
+	width: 100%;
+}
+
+
+.container.grid-3 {
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.grid-3 .item {
+	flex: 0 32%;
+	margin-bottom: 2%;
+}
+
+.container.bars-v {
+	align-items: flex-end;
+	justify-content: space-between;
+	height: 300px;
+}
+.bars-v .item { width: 14%; }
+
+.bars-v .item:nth-child(1) { height: 40%; }
+.bars-v .item:nth-child(2) { height: 50%; }
+.bars-v .item:nth-child(3) { height: 60%; }
+.bars-v .item:nth-child(4) { height: 20%; }
+.bars-v .item:nth-child(5) { height: 30%; }
+
+.container.bars-h {
+	justify-content: space-between;
+	flex-direction: column;
+	height: 300px;
+}
+.bars-h .item { height: 14%; }
+
+.bars-h .item:nth-child(1) { width: 40%; }
+.bars-h .item:nth-child(2) { width: 50%; }
+.bars-h .item:nth-child(3) { width: 60%; }
+.bars-h .item:nth-child(4) { width: 20%; }
+.bars-h .item:nth-child(5) { width: 30%; }
+
+.container.vertical {
+	flex-direction: column;
+	align-items: center;
+}
+
+.vertical .item {
+	height: 40px;
+	margin-bottom: 10px;
+	width: 50%;
+}
+
+.container.masonry {
+	flex-flow: column wrap;
+	align-content: space-between;
+	height: 690px;
+}
+.container.masonry::before,
+.container.masonry::after{
+	content: "";
+	flex-basis: 100%;
+	width: 0;
+	order: 2;
+}
+
+.masonry .item {
+	width: 32%;
+	margin-bottom: 2%;
+}
+
+.masonry .item:nth-child(1) { height: 100px; }
+.masonry .item:nth-child(2) { height: 200px; }
+.masonry .item:nth-child(3) { height: 150px; }
+.masonry .item:nth-child(4) { height: 120px; }
+.masonry .item:nth-child(5) { height: 220px; }
+.masonry .item:nth-child(6) { height: 180px; }
+.masonry .item:nth-child(7) { height: 80px; }
+.masonry .item:nth-child(8) { height: 190px; }
+
+
+
+.masonry .item:nth-child(3n+1) { order: 1; }
+.masonry .item:nth-child(3n+2) { order: 2; }
+.masonry .item:nth-child(3n)   { order: 3; }
