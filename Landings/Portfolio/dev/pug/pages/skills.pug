@@ -1,0 +1,26 @@
+mixin skillsListItem(label,text,percent)
+	li.skills-list__item
+		.skills-list__key
+			span.skills-list__label=label
+		.skills-list__value
+			if(!percent)
+				span.skills-list__text=text
+			else
+				.skill-line
+					.skill-line__percent(style=`width:${percent}`)
+
+
+section.s-skills.light-bg
+	.container
+		h2 Skills
+		.skills
+			.skills__photo-wrapper
+				img(src="static/images/general/photo.jpg" alt="Фото").skills__photo
+			ul.skills__list.skills-list
+				+skillsListItem('Profile','UI / UX Engineer, Front-end Developer')
+				+skillsListItem('UX Research','','85%')
+				+skillsListItem('Tools','Paper, Pen, Balsamiq')
+				+skillsListItem('UI Design','','80%')
+				+skillsListItem('Tools','Adobe PS, AI, XD, Figma, InVision')
+				+skillsListItem('Front-end Dev','','60%')
+				+skillsListItem('Tools','HTML, CSS, JS, Bootstrap, React')

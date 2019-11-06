@@ -1,0 +1,52 @@
+.skills {
+  @media screen and (min-width: $tablet-size + 1) {
+    display: flex;
+  }
+  &__photo-wrapper {
+    @media screen and (min-width: $tablet-size + 1) {
+      flex-shrink: 0;
+      padding-right: 100px;
+      width: 40%;
+    }
+    @media screen and (max-width: $tablet-size) {
+      margin-bottom: 40px;
+    }
+
+  }
+  &__list {
+    flex: 1;
+  }
+}
+
+.skills-list {
+  &__item {
+    display: flex;
+    &:not(:last-child) { margin-bottom: 20px; }
+    &:first-child { margin-bottom: 60px; }
+
+  }
+  &__key {
+    flex-shrink: 0;
+    padding-right: 10px;
+    width: 200px;
+  }
+  &__label {
+    font-weight: 600;
+  }
+  &__value {
+    flex: 1;
+  }
+}
+.skill-line {
+  background-color: #F5D6AB;
+  height: 25px;
+  position: relative;
+  &__percent {
+    background-color: #C66C49;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+}

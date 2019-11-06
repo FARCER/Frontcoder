@@ -1,0 +1,13 @@
+header
+	.container
+		.header
+			.sandwich(data-target-id="main-nav" data-target-class-toggle="is-active")
+				.sandwich__line.sandwich__line--top
+				.sandwich__line.sandwich__line--middle
+				.sandwich__line.sandwich__line--bottom
+			span.header__title Portfolio
+			nav.main-nav#main-nav
+				ul.main-nav__list
+					each link in ['Home','About','Skills','Portfolio','Contact']
+						li.main-nav__item
+							a(href='').main-nav__link=link

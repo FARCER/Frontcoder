@@ -1,0 +1,42 @@
+.portfolio {
+  &__body {
+    @media screen and (min-width: $tablet-size + 1) {
+      display: flex;
+    }
+  }
+  &__info {
+
+    @media screen and (min-width: $tablet-size + 1) {
+      flex-shrink: 0;
+      padding-right: 100px;
+      width: 40%;
+    }
+    @media screen and (max-width: $tablet-size) {
+      margin-bottom: 40px;
+    }
+  }
+  &__photos {
+    display: flex;
+    flex: 1;
+  }
+  &__col {
+    flex: 1;
+    &:not(:last-child) {
+      margin-right: 30px; }
+    &:first-child {
+      flex-shrink: 0;
+      width: 350px;
+    }
+  }
+  &__photo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    &:not(:last-child) {
+      margin-bottom: 30px; }
+    &.portfolio__photo--big {
+      height: 250px;
+    }
+  }
+}

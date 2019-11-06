@@ -1,0 +1,28 @@
+header {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  z-index: 5;
+  @media screen and (max-width: $tablet-size) {
+    top: 35px;
+  }
+}
+.header {
+  color: $white;
+  display: flex;
+  line-height: 1.3;
+  justify-content: space-between;
+  position: relative;
+  @media screen and (max-width: $mobile-size) {
+    justify-content: center;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .sandwich {
+    left: 0;
+    position: absolute;
+  }
+
+}

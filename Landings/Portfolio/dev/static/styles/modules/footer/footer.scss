@@ -1,0 +1,30 @@
+footer {
+  flex: 0 0 auto;
+  padding: 90px 0 190px;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  &__link {
+    color: #333333;
+    text-decoration: none;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px; }
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  span {
+    &:not(:last-child) {
+      margin-bottom: 15px; }
+  }
+}

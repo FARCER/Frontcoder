@@ -1,0 +1,40 @@
+.main-nav {
+  &.is-active {
+    background-color: #000;
+    bottom: 0;
+    display: block;
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+  }
+  @media screen and (max-width: $mobile-size) {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    @media screen and (max-width: $mobile-size) {
+      justify-content: center;
+      font-size: 30px;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      @media screen and (min-width: $mobile-size + 1) {
+        margin-right: 60px;
+      }
+      @media screen and (max-width: $mobile-size) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__link {
+    color: $white;
+    display: block;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
