@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {Contact} from "../../../models/contact.model";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Contact} from '../../../models/contact.model';
+import {ContactsService} from '../../../services/contacts.service';
 
 @Component({
   selector: 'app-add-contact-form',
@@ -18,18 +19,23 @@ export class AddContactFormComponent implements OnInit {
     this.isShowForm = true;
   }
 
+  constructor(
+    private contactsService: ContactsService
+  ) {
+  }
+
   ngOnInit(): void {
     this.addContactForm = new FormGroup({
       name: new FormControl(null, {validators: [Validators.required]}),
       phone: new FormControl(null, {validators: [Validators.required]}),
-    })
+    });
   }
 
   public onSubmit(): void {
-    let name = this.addContactForm.value.name;
-    let phone = this.addContactForm.value.phone;
-    let contact = new Contact(name, phone);
-    this.addContact.emit(contact);
+    const name = this.addContactForm.value.name;
+    const phone = this.addContactForm.value.phone;
+    const contact = new Contact(name, phone);
+    this.contactsService.addContact(contact);
     this.addContactForm.reset();
     this.isShowForm = false;
   }

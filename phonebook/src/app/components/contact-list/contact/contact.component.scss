@@ -11,4 +11,13 @@
     font-size: 20px;
     margin-right: 10px;
   }
+  .remove {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+  }
 }
