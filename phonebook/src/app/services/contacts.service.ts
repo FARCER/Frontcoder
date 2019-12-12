@@ -11,7 +11,7 @@ export class ContactsService {
 
   private contacts: Contact[] = [];
 
-  public initContacts(): Contact[] {
+  public updateContacts(): Contact[] {
     this.contacts = JSON.parse(localStorage.getItem('contacts')) || [];
     return this.contacts;
   }

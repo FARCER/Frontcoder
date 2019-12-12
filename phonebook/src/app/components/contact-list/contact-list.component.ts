@@ -17,7 +17,7 @@ export class ContactListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.contacts = this.contactsService.initContacts();
+    this.updateContacts();
   }
 
   public filter(e: KeyboardEvent): void {
@@ -26,7 +26,7 @@ export class ContactListComponent implements OnInit {
       this.contacts = this.contacts.filter(contact => contact.name.toLocaleLowerCase().includes(value));
       this.isFiltered = true;
     } else {
-      this.contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+      this.updateContacts();
       this.isFiltered = false;
     }
   }
@@ -38,5 +38,9 @@ export class ContactListComponent implements OnInit {
     if (this.contacts.length === 0 && !this.isFiltered) {
       return 'Еще не добавлено ни одного контакта';
     }
+  }
+
+  public updateContacts(): void {
+    this.contacts = this.contactsService.updateContacts();
   }
 }

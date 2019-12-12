@@ -1,4 +1,4 @@
 <input type="text" class="input" (keyup)="filter($event)">
 <app-add-contact-form></app-add-contact-form>
-<app-contact *ngFor="let contact of contacts" [contact]="contact"></app-contact>
+<app-contact *ngFor="let contact of contacts" [contact]="contact" (remove)="updateContacts()"></app-contact>
 <p *ngIf="contacts.length === 0">{{emptyMessage()}}</p>
