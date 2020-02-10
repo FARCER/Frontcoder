@@ -47,4 +47,8 @@ export class View {
     this.loadMoreBtn.style.display = show ? 'block' : 'none';
   }
 
+  setCounterMessage(message) {
+    this.searchCounter.textContent = message;
+  }
+
 }
