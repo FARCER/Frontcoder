@@ -7,4 +7,4 @@ import {Log} from "./modules/log.js";
 const api = new Api();
 
 
-const app = new Search(new View(), api, new Log());
+const app = new Search(new View(api), api, new Log());
